@@ -1,5 +1,6 @@
 "use client";
 import Image from 'next/image';
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
@@ -28,8 +29,7 @@ export default function Home() {
               <span className="gradient-text">No Cure, No Pay</span><br />
             </h1>
             <p className="hero-description">
-              Exclusieve dienstverlening voor geselecteerde merken die hun Bol.com potentieel 
-              willen maximaliseren. Een samenwerking die zichzelf altijd terugbetaalt.
+              Exclusieve dienstverlening voor geselecteerde merken die hun Bol.com potentieel willen maximaliseren. Een samenwerking die zichzelf altijd terugbetaalt.
             </p>
             <div className="hero-metrics">
               <div className="metric">
@@ -54,17 +54,16 @@ export default function Home() {
         <div className="container">
           <div className="proof-content">
             <div className="founder-photo-social">
-
-<Image
-  src="/Foto.png"
-  alt="Nick Diepenmaat"
-  width={200}
-  height={200}
-  className="your-custom-class"
-/>       
-     </div>
+              <Image
+                src="/Foto.png"
+                alt="Nick Diepenmaat"
+                width={200}
+                height={200}
+                className="your-custom-class"
+              />
+            </div>
             <div className="proof-quote">
-              "Ik beheer je Bol.com-account en zorg voor hoge conversie, zodat jij je kunt focussen op belangrijkere zaken binnen je bedrijf."
+              &ldquo;Ik beheer je Bol.com-account en zorg voor hoge conversie, zodat jij je kunt focussen op belangrijkere zaken binnen je bedrijf.&rdquo;
             </div>
             <div className="proof-attribution">— Nick Diepenmaat</div>
           </div>
@@ -80,16 +79,14 @@ export default function Home() {
               <span className="gradient-text">Jij betaalt pas als het werkt</span>
             </h2>
           </div>
-          
+
           <div className="services-grid">
             <div className="service-card premium">
               <div className="card-header">
                 <div className="card-icon">⚡</div>
                 <div className="card-title">Fix & Grow</div>
               </div>
-              <div className="card-description">
-                Vast tarief vooraf
-              </div>
+              <div className="card-description">Vast tarief vooraf</div>
               <div className="card-features">
                 <div className="feature">Complete beheer van Bol.com</div>
                 <div className="feature">Strategische marktpositionering</div>
@@ -106,9 +103,7 @@ export default function Home() {
                 <div className="card-icon">🎯</div>
                 <div className="card-title">Pure Performance</div>
               </div>
-              <div className="card-description">
-                Tarief op basis van extra omzet
-              </div>
+              <div className="card-description">Tarief op basis van extra omzet</div>
               <div className="card-features">
                 <div className="feature">Geen opstartkosten</div>
                 <div className="feature">Betaling gekoppeld aan groei</div>
@@ -130,7 +125,7 @@ export default function Home() {
             <h2>Bewezen <span className="gradient-text">resultaten</span></h2>
             <p>Dit bereiken onze partners gemiddeld binnen 90 dagen</p>
           </div>
-          
+
           <div className="results-grid">
             <div className="result-item">
               <div className="result-number">+312%</div>
@@ -159,30 +154,24 @@ export default function Home() {
             <h2>Onze <span className="gradient-text">aanpak</span></h2>
             <p>Elke partner ontvangt een persoonlijke aanpak die zichzelf altijd terugbetaalt</p>
           </div>
-          
+
           <div className="process-steps">
             <div className="step">
-              <div className="step-number">
-                <span>01</span>
-              </div>
+              <div className="step-number"><span>01</span></div>
               <div className="step-content">
                 <h3>Diepgaande analyse</h3>
                 <p>We gaan samen kijken waar de potentie zit voor jouw merk op Bol.com</p>
               </div>
             </div>
             <div className="step">
-              <div className="step-number">
-                <span>02</span>
-              </div>
+              <div className="step-number"><span>02</span></div>
               <div className="step-content">
                 <h3>Strategisch plan</h3>
                 <p>Jouw producten moeten op de best mogelijke manier gepresenteerd worden</p>
               </div>
             </div>
             <div className="step">
-              <div className="step-number">
-                <span>03</span>
-              </div>
+              <div className="step-number"><span>03</span></div>
               <div className="step-content">
                 <h3>Performance monitoring</h3>
                 <p>Hoe gaan de sales? Halen we de vooraf gestelde doelen? Hierop bijsturen!</p>
@@ -197,9 +186,7 @@ export default function Home() {
         <div className="container">
           <div className="testimonial-content">
             <div className="testimonial-text">
-              "Binnen 4 maanden zijn we van een onbekend merk naar marktleider geworden 
-              in onze categorie. De ROI was fenomenaal — elke euro investering leverde 
-              €4,20 extra omzet op."
+              &ldquo;Binnen 4 maanden zijn we van een onbekend merk naar marktleider geworden in onze categorie. De ROI was fenomenaal — elke euro investering leverde €4,20 extra omzet op.&rdquo;
             </div>
             <div className="testimonial-author">
               <div className="author-name">Lisa van der Berg</div>
