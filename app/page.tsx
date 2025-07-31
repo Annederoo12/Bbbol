@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
@@ -54,8 +54,15 @@ export default function Home() {
         <div className="container">
           <div className="proof-content">
             <div className="founder-photo-social">
-              <img src="Foto.png" alt="Nick Diepenmaat" />
-            </div>
+
+<Image
+  src="/Foto.png"
+  alt="Nick Diepenmaat"
+  width={200}
+  height={200}
+  className="your-custom-class"
+/>       
+     </div>
             <div className="proof-quote">
               "Ik beheer je Bol.com-account en zorg voor hoge conversie, zodat jij je kunt focussen op belangrijkere zaken binnen je bedrijf."
             </div>
