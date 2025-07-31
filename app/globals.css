@@ -1605,3 +1605,81 @@ body {
     font-size: 32px;
   }
 }
+  /* Phone Popup Styles */
+.phone-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.phone-popup-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 300px;
+  max-width: 90vw;
+}
+
+.phone-popup-title {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.phone-popup-text {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.phone-popup-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.phone-popup-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.phone-popup-close {
+  background-color: #e5e7eb;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #374151;
+  transition: background-color 0.2s ease;
+}
+
+.phone-popup-close:hover {
+  background-color: #d1d5db;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .phone-popup-content {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .phone-popup-title {
+    font-size: 1.1rem;
+  }
+  
+  .phone-popup-text {
+    font-size: 1rem;
+  }
+}

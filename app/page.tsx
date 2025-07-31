@@ -1,7 +1,10 @@
 "use client";
 import Image from 'next/image';
+import { useState } from "react";
 
 export default function Home() {
+  const [showPhone, setShowPhone] = useState(false);
+  
   return (
     <main className="min-h-screen bg-white">
       {/* Navigation */}
@@ -14,10 +17,30 @@ export default function Home() {
               <a href="#aanpak" className="nav-link">Onze aanpak</a>
               <a href="#invite-only" className="nav-link">Invite-only</a>
             </div>
-            <div className="nav-status">Contact</div>
+            <div className="nav-status">
+            <button onClick={() => setShowPhone(prev => !prev)}>Contact</button>
+            </div>
           </div>
         </div>
       </nav>
+
+      {/* Phone Popup */}
+      {showPhone && (
+        <div className="phone-popup" onClick={() => setShowPhone(false)}>
+          <div className="phone-popup-content" onClick={(e) => e.stopPropagation()}>
+            <h3 className="phone-popup-title">Contact informatie</h3>
+            <p className="phone-popup-text">
+              📞 Bel ons: <a href="tel:+31640565693" className="phone-popup-link">+31 6 40 56 56 93</a>
+            </p>
+            <button 
+              onClick={() => setShowPhone(false)}
+              className="phone-popup-close"
+            >
+              Sluiten
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="hero">
