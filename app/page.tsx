@@ -18,7 +18,12 @@ export default function Home() {
               <a href="#invite-only" className="nav-link">Invite-only</a>
             </div>
             <div className="nav-status">
-            <button onClick={() => setShowPhone(prev => !prev)}>Contact</button>
+            <button 
+            onClick={() => setShowPhone(prev => !prev)}
+            className="nav-status">
+              Contact
+
+            </button>
             </div>
           </div>
         </div>
@@ -225,7 +230,7 @@ export default function Home() {
           <div className="exclusivity-content">
             <h2>🔒 Waarom deze site geen <span className="gradient-text">contactformulier heeft?</span></h2>
             <p className="exclusivity-description">
-              Mijn filosofie is simpel: als ik jou minder oplever dan jij mij betaalt, werken we niet samen.
+              Mijn filosofie is simpel: als ik jou minder oplever dan jij mij betaalt, werken we niet samen. Om dat te kunnen waarborgen kan ik alleen met bedrijven samenwerken waarvan ik zeker weet dat de potentie echt groot is. Daarom kies ik ervoor om zelf geschikte bedrijven te benaderen.
             </p>
             <div className="exclusivity-features">
               <div className="exclusivity-item">
