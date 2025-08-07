@@ -1,26 +1,28 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
 
 const PUBLIC_FILE = /\.(.*)$/
+const locales = ['nl', 'de']
+const defaultLocale = 'nl'
 
-export function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl
 
+  // Skip static files or if already prefixed
   if (
-    pathname.startsWith('/_next') ||
+    PUBLIC_FILE.test(pathname) ||
     pathname.startsWith('/api') ||
-    pathname.startsWith('/favicon.ico') ||
-    PUBLIC_FILE.test(pathname)
+    locales.some((loc) => pathname.startsWith(`/${loc}`))
   ) {
     return
   }
 
-  const hostname = req.headers.get('host')
-  const locale = req.headers.get('accept-language')?.split(',')[0].split('-')[0] || 'nl'
+  // Detect browser language
+  const acceptLang = request.headers.get('accept-language') || ''
+  const preferred = acceptLang.startsWith('de') ? 'de' : 'nl'
 
-  if (!pathname.startsWith(`/${locale}`)) {
-    req.nextUrl.pathname = `/${locale}${pathname}`
-    return NextResponse.redirect(req.nextUrl)
-  }
-
-  return NextResponse.next()
+  // Redirect to correct locale
+  const url = request.nextUrl.clone()
+  url.pathname = `/${preferred}${pathname}`
+  return NextResponse.redirect(url)
 }
