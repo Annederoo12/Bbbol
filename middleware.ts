@@ -8,20 +8,20 @@ const defaultLocale = 'nl'
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Skip static files or if already prefixed
+  // Als het pad al begint met een locale, doe niks
   if (
     PUBLIC_FILE.test(pathname) ||
     pathname.startsWith('/api') ||
     locales.some((loc) => pathname.startsWith(`/${loc}`))
   ) {
-    return
+    return NextResponse.next()
   }
 
-  // Detect browser language
+  // Detecteer browsertaal
   const acceptLang = request.headers.get('accept-language') || ''
   const preferred = acceptLang.startsWith('de') ? 'de' : 'nl'
 
-  // Redirect to correct locale
+  // Redirect alleen als niet al in een taalmap
   const url = request.nextUrl.clone()
   url.pathname = `/${preferred}${pathname}`
   return NextResponse.redirect(url)
