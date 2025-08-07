@@ -1,9 +1,4 @@
-const nextConfig = {
-  i18n: {
-    locales: ['nl', 'de'],
-    defaultLocale: 'nl',
-    localeDetection: false,
-  },
-}
+// next.config.ts
+const nextConfig = {}
 
 export default nextConfig
